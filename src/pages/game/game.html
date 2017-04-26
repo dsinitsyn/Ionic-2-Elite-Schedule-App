@@ -6,13 +6,21 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>game</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>game</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+    <!--<p>{{game.team1}}</p>-->
+    <ion-row center>
+        <ion-col width-50 text-center class="divider-col" (click)="teamTapped(game.team1Id)">
+            <h4>{{game.team1}}</h4>
+        </ion-col>
+        <ion-col width-50 text-center (click)="teamTapped(game.team2Id)">
+            <h4>{{game.team2}}</h4>
+        </ion-col>
+    </ion-row>
 </ion-content>

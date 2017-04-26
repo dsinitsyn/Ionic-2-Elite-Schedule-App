@@ -1,8 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
+
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Game, MyTeams, TeamDetail, Tournaments } from '../pages/pages';
+import { EliteApi } from '../shared/shared';
 
 
 @Component({
@@ -28,7 +30,7 @@ export class MyApp {
     }
 
     goHome(){
-        this.nav.push(MyTeams);
+        this.nav.popToRoot(MyTeams);
     }
 
     goToTournaments(){

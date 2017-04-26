@@ -4,7 +4,13 @@
 
 
 <ion-content padding>
-    <h2>Details</h2>
-    <h3>Name: {{team.name}}</h3>
-    <button ion-button (click)="goHome()">Go home</button>
+    <ion-list>
+        <ion-item *ngFor="let game of games" (click)="gameClicked($event, game)">
+            <ion-row>
+                <ion-col width-60>
+                    <p>{{game.opponent}}</p>
+                </ion-col>
+            </ion-row>
+        </ion-item>
+    </ion-list>
 </ion-content>
